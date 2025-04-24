@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Coding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <h1>Huffman Coding Algorithm</h1>
+
+    <div class="container">
+        <label for="inputText">Enter Text:</label>
+        <textarea id="inputText" rows="5" placeholder="Type or paste text here..."></textarea>
+        <button id="generateButton">Generate Huffman Tree & Codes</button>
+
+        <div id="results">
+            <h2>Results</h2>
+
+            <!-- Container for the D3 Tree -->
+            <div id="treeOutput">
+                <h3>Huffman Tree:</h3>
+                <div id="d3TreeContainer">
+                     <p>Enter text and click generate.</p>
+                </div>
+            </div>
+
+            <div id="codesOutput">
+                <h3>Character Codes:</h3>
+                <p>Enter text and click generate.</p>
+            </div>
+
+            <div id="statsOutput">
+                <h3>Compression Stats:</h3>
+                <p>Enter text and click generate.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
