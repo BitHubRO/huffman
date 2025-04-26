@@ -72,7 +72,7 @@ function huffmanEncode(text) {
 }
 
 
-// --- Text Tree Visualization Helper --- (Keep the function from before)
+// --- Text Tree Visualization Helper ---
 function generateTreeText(node, indent = '', prefix = '') {
      if (!node) {
         return '';
@@ -90,7 +90,7 @@ function generateTreeText(node, indent = '', prefix = '') {
     return output;
 }
 
-// --- NEW: Convert HuffmanNode to D3 compatible format ---
+// --- Convert HuffmanNode to D3 compatible format ---
 function convertNodeToD3(node) {
     if (!node) {
         return null;
@@ -98,7 +98,7 @@ function convertNodeToD3(node) {
 
     let name = '';
     if (node.isLeaf()) {
-        // Use 'SPACE' or similar for space character for better visibility in D3
+        // ' ' for space
         const charDisplay = node.char === ' ' ? "' '" : node.char;
         name = `${charDisplay} (${node.freq})`;
     } else {
@@ -123,7 +123,7 @@ function convertNodeToD3(node) {
 }
 
 
-// --- NEW: D3 Tree Drawing Function ---
+// --- D3 Tree Drawing Function ---
 function drawHuffmanTree(d3Data, containerSelector) {
     const container = d3.select(containerSelector);
     container.html(''); // Clear previous drawing/message
@@ -295,7 +295,7 @@ generateButton.addEventListener('click', () => {
      }
 
 
-    // --- Display Codes --- (Same as before, maybe clear message first)
+    // --- Display Codes --- 
     codesOutputDiv.innerHTML = '<h3>Character Codes:</h3>'; // Clear previous
      if (Object.keys(codes).length > 0) {
         const table = document.createElement('table');
