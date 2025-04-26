@@ -1,4 +1,4 @@
-// --- Huffman Node --- (Keep the class definition from before)
+// --- Huffman Node --- 
 class HuffmanNode {
     constructor(char, freq, left = null, right = null) {
         this.char = char;
@@ -11,7 +11,7 @@ class HuffmanNode {
     }
 }
 
-// --- Huffman Encoding Function --- (Keep the function from before)
+// --- Huffman Encoding Function ---
 function huffmanEncode(text) {
     if (!text) {
         return { codes: {}, tree: null, stats: { originalBits: 0, encodedBits: 0, ratio: 0 } };
